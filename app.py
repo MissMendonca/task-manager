@@ -10,7 +10,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 app.config["MONDO_DBNAME"] = 'task_manager'
-app.config["MONGO_URI"] = os.environ.get["MONGO_URI"]
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo= PyMongo(app)
 
