@@ -19,6 +19,10 @@ mongo= PyMongo(app)
 def tasks():
     return render_template("tasks.html", tasks = mongo.db.tasks.find())
 
+@app.route('/addtask')
+def addtask():
+    return render_template('addtask.html')
+
 if __name__ == "__main__":
     app.run(host = os.getenv("IP", "0.0.0.0"),
         port= int(os.getenv("PORT", "5000")),
